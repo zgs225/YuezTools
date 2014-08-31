@@ -1,7 +1,37 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-module YuezTools
+module YuezTools #:nodoc:
+
+  # == An terminal graphic api for Ruby.
+  #
+  # == Simple example
+  #
+  #    require "yuez-tools/turtle"
+  #
+  #    turtle = YuezTools::Turtle.new
+  #      turtle.walk do
+  #        3.times do
+  #          forward 8
+  #          pen_down
+  #
+  #        4.times do
+  #          forward 4
+  #          left
+  #        end
+  #        pen_up
+  #      end
+  #    end
+  #    turtle.draw
+  #
+  #    This produces:
+  #
+  #    #####   #####   #####
+  #    #   #   #   #   #   #
+  #    #   #   #   #   #   #
+  #    #   #   #   #   #   #
+  #    #####   #####   #####
+  #
   class Turtle
     # directions: 0 = E, 1 = S, 2 = W, 3 = N
     # axis: 0 = x, 1 = y
